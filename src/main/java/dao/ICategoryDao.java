@@ -1,0 +1,18 @@
+package dao;
+
+import dto.CategoryDTO;
+import dto.ProductDTO;
+import entity.Category;
+
+import java.util.List;
+
+
+public interface ICategoryDao {
+    List<Category> categoryList();
+    List<CategoryDTO> categoryDTOList();
+    boolean updateCategory(Category category);
+    boolean insert(Category category);
+    boolean remove(int categoryId);
+    List<ProductDTO> findAllProductByCategoryWithPagination(int id, int offset, int limit);
+    List<CategoryDTO> findAllCategories();
+}
